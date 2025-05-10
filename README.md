@@ -15,7 +15,7 @@ Fonctionnalités principales :
 ## 🚀 Installation et Lancement
 
 ### Prérequis
-* Node.js (v18+)
+* Node.js (v19+)
 * npm ou yarn
 * TypeScript (installé globalement si nécessaire)
 
@@ -57,11 +57,10 @@ Fonctionnalités principales :
 * **Framework**: Express.js
 * **Langage**: TypeScript
 * **Validation**: Zod
-* **Gestion d'erreurs**: Middleware personnalisé
 * **CORS**: Activation pour le développement
 
 ### Frontend
-* **Framework**: React 18
+* **Framework**: React 19
 * **Build Tool**: Vite
 * **Gestion d'état**: Zustand
 * **Requêtes API**: TanStack Query
@@ -81,8 +80,7 @@ backend/
 │   ├── routes/              # Définition des routes
 │   ├── controllers/         # Logique métier
 │   ├── schemas/             # Schémas Zod
-│   ├── models/              # Types TS
-│   └── middlewares/         # Middlewares
+│   ├── tasks/              # Types TS
 ```
 
 ### Frontend
@@ -135,11 +133,6 @@ frontend/
 * Accessibilité (ARIA, contrastes)
 
 ## 📝 Notes Techniques
-
-1. **Conversion de statuts**:
-   * Le backend utilise "pending"/"done" (anglais)
-   * Le frontend utilise "en_attente"/"terminee" (français)
-   * Conversion automatique dans le service API
 
 2. **Stockage des données**:
    * Backend: tableau en mémoire
