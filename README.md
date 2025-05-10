@@ -1,114 +1,79 @@
-# Test_Technique-CFP-GROUP
-Application de Gestion de Tâches (Fullstack TypeScript)
-📌 Description du Projet
+# Application de Gestion de Tâches (Fullstack TypeScript)
+
+## 📌 Description du Projet
 
 Application fullstack de gestion de tâches développée avec :
-
-    Backend: Express + TypeScript
-
-    Frontend: React + TypeScript
+* **Backend**: Express + TypeScript
+* **Frontend**: React + TypeScript
 
 Fonctionnalités principales :
+* CRUD complet pour les tâches
+* Filtrage par statut
+* Interface responsive et moderne
+* Validation des données côté client et serveur
 
-    CRUD complet pour les tâches
+## 🚀 Installation et Lancement
 
-    Filtrage par statut
+### Prérequis
+* Node.js (v18+)
+* npm ou yarn
+* TypeScript (installé globalement si nécessaire)
 
-    Interface responsive et moderne
+### Backend (Express)
+1. **Se placer dans le dossier backend**:
+   ```bash
+   cd backend
+   ```
+2. **Installer les dépendances**:
+   ```bash
+   npm install # ou yarn install
+   ```
+3. **Lancer le serveur** (port 3100 par défaut):
+   ```bash
+   npm run dev # ou yarn dev
+   ```
 
-    Validation des données côté client et serveur
+### Frontend (React)
+1. **Se placer dans le dossier frontend**:
+   ```bash
+   cd frontend
+   ```
+2. **Installer les dépendances**:
+   ```bash
+   npm install # ou yarn install
+   ```
+3. **Lancer l'application** (port 5173 par défaut):
+   ```bash
+   npm run dev # ou yarn dev
+   ```
 
-🚀 Installation et Lancement
-Prérequis
+## 🌐 Accès à l'application
+* Frontend: http://localhost:5173
+* Backend (API): http://localhost:3100
 
-    Node.js (v18+)
+## 🛠 Stack Technique
 
-    npm ou yarn
+### Backend
+* **Framework**: Express.js
+* **Langage**: TypeScript
+* **Validation**: Zod
+* **Gestion d'erreurs**: Middleware personnalisé
+* **CORS**: Activation pour le développement
 
-    TypeScript (installé globalement si nécessaire)
+### Frontend
+* **Framework**: React 18
+* **Build Tool**: Vite
+* **Gestion d'état**: Zustand
+* **Requêtes API**: TanStack Query
+* **Formulaires**: React Hook Form + Zod
+* **Styling**: Tailwind CSS
+* **Alertes**: SweetAlert2
+* **Animations**: CSS transitions
 
-Backend (Express)
+## 🏗 Architecture du Projet
 
-    Se placer dans le dossier backend:
-    bash
-
-cd backend
-
-Installer les dépendances:
-bash
-
-npm install
-# ou
-yarn install
-
-Lancer le serveur (port 3100 par défaut):
-bash
-
-    npm run dev
-    # ou
-    yarn dev
-
-Frontend (React)
-
-    Se placer dans le dossier frontend:
-    bash
-
-cd frontend
-
-Installer les dépendances:
-bash
-
-npm install
-# ou
-yarn install
-
-Lancer l'application (port 5173 par défaut):
-bash
-
-    npm run dev
-    # ou
-    yarn dev
-
-🌐 Accès à l'application
-
-    Frontend: http://localhost:5173
-
-    Backend (API): http://localhost:3100
-
-🛠 Stack Technique
-Backend
-
-    Framework: Express.js
-
-    Langage: TypeScript
-
-    Validation: Zod
-
-    Gestion d'erreurs: Middleware personnalisé
-
-    CORS: Activation pour le développement
-
-Frontend
-
-    Framework: React 18
-
-    Build Tool: Vite
-
-    Gestion d'état: Zustand
-
-    Requêtes API: TanStack Query
-
-    Formulaires: React Hook Form + Zod
-
-    Styling: Tailwind CSS
-
-    Alertes: SweetAlert2
-
-    Animations: CSS transitions
-
-🏗 Architecture du Projet
-Backend
-
+### Backend
+```
 backend/
 ├── src/
 │   ├── app.ts               # Configuration Express
@@ -118,9 +83,10 @@ backend/
 │   ├── schemas/             # Schémas Zod
 │   ├── models/              # Types TS
 │   └── middlewares/         # Middlewares
+```
 
-Frontend
-
+### Frontend
+```
 frontend/
 ├── src/
 │   ├── api/                 # Services API
@@ -129,91 +95,66 @@ frontend/
 │   ├── types/               # Types TS
 │   ├── App.tsx              # Composant principal
 │   └── main.tsx             # Point d'entrée
+```
 
-🔄 Endpoints API
-Méthode	Endpoint	Description
-GET	/tasks	Liste toutes les tâches
-POST	/tasks	Crée une nouvelle tâche
-DELETE	/tasks/:id	Supprime une tâche
-PATCH	/tasks/:id	Met à jour le statut d'une tâche
-🎨 Fonctionnalités Frontend
+## 🔄 Endpoints API
 
-    Affichage des tâches
+| Méthode | Endpoint    | Description                |
+|---------|------------|----------------------------|
+| GET     | /tasks     | Liste toutes les tâches    |
+| POST    | /tasks     | Crée une nouvelle tâche    |
+| DELETE  | /tasks/:id | Supprime une tâche         |
+| PATCH   | /tasks/:id | Met à jour le statut d'une tâche |
 
-        Liste filtrée par statut
+## 🎨 Fonctionnalités Frontend
 
-        Cartes animées avec effets de survol
+1. **Affichage des tâches**
+   * Liste filtrée par statut
+   * Cartes animées avec effets de survol
+   * Gestion des descriptions longues
 
-        Gestion des descriptions longues
+2. **Gestion des tâches**
+   * Ajout via modal
+   * Basculement de statut
+   * Suppression avec confirmation
 
-    Gestion des tâches
+3. **UI/UX**
+   * Interface entièrement en français
+   * Feedback visuel pour toutes les actions
+   * Design responsive (mobile, tablette, desktop)
+   * Alertes personnalisées avec SweetAlert2
 
-        Ajout via modal
+## ✅ Bonnes Pratiques Implémentées
 
-        Basculement de statut
+* Typage strict TypeScript
+* Validation des données côté client et serveur
+* Gestion centralisée des erreurs
+* Architecture modulaire
+* Code lisible et bien documenté
+* Optimisation des performances
+* Accessibilité (ARIA, contrastes)
 
-        Suppression avec confirmation
+## 📝 Notes Techniques
 
-    UI/UX
+1. **Conversion de statuts**:
+   * Le backend utilise "pending"/"done" (anglais)
+   * Le frontend utilise "en_attente"/"terminee" (français)
+   * Conversion automatique dans le service API
 
-        Interface entièrement en français
+2. **Stockage des données**:
+   * Backend: tableau en mémoire
+   * Frontend: cache via TanStack Query
 
-        Feedback visuel pour toutes les actions
+3. **Styles**:
+   * Utilisation intensive de Tailwind CSS
+   * Personnalisation des composants
+   * Animations CSS fluides
 
-        Design responsive (mobile, tablette, desktop)
+## 🚀 Améliorations Possibles
 
-        Alertes personnalisées avec SweetAlert2
-
-✅ Bonnes Pratiques Implémentées
-
-    Typage strict TypeScript
-
-    Validation des données côté client et serveur
-
-    Gestion centralisée des erreurs
-
-    Architecture modulaire
-
-    Code lisible et bien documenté
-
-    Optimisation des performances
-
-    Accessibilité (ARIA, contrastes)
-
-📝 Notes Techniques
-
-    Conversion de statuts:
-
-        Le backend utilise "pending"/"done" (anglais)
-
-        Le frontend utilise "en_attente"/"terminee" (français)
-
-        Conversion automatique dans le service API
-
-    Stockage des données:
-
-        Backend: tableau en mémoire
-
-        Frontend: cache via TanStack Query
-
-    Styles:
-
-        Utilisation intensive de Tailwind CSS
-
-        Personnalisation des composants
-
-        Animations CSS fluides
-
-🚀 Améliorations Possibles
-
-    Ajout d'un système d'authentification
-
-    Persistance des données (base de données)
-
-    Mode sombre
-
-    Système de priorités/dates d'échéance
-
-    Fonctionnalité de recherche
-
-    Tests unitaires/intégration
+* Ajout d'un système d'authentification
+* Persistance des données (base de données)
+* Mode sombre
+* Système de priorités/dates d'échéance
+* Fonctionnalité de recherche
+* Tests unitaires/intégration
